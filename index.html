@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111318">
+    <meta name="description" content="Find and learn the most useful Visual Studio Code keyboard shortcuts.">
+    <title>Shortcut Studio — VS Code shortcuts, made simple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Shortcut Studio home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>shortcut<span class="brand-light">studio</span></span>
+      </a>
+      <nav class="top-links" aria-label="Main navigation">
+        <a class="top-link active" href="#shortcuts">Shortcuts</a>
+        <a class="top-link" href="#how-it-works">How it works</a>
+      </nav>
+      <a class="top-cta" href="#shortcuts">Start exploring <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="how-it-works">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR QUICK GUIDE TO VS CODE</div>
+          <h1>Less clicking.<br>More <span class="accent">making.</span></h1>
+          <p class="hero-description">The shortcuts you'll actually use, all in one place.<br>Find a key combo. Make it a habit. Get in your flow.</p>
+          <a class="hero-link" href="#shortcuts">Find your next favorite <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="hero-key key-command">⌘</div>
+          <div class="hero-key key-p">P</div>
+          <div class="hero-key key-shift">⇧</div>
+          <div class="hero-caption"><span class="caption-line"></span><span>your hands, meet your new workflow</span></div>
+        </div>
+      </section>
+
+      <section class="shortcut-section" id="shortcuts">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow section-eyebrow">THE GOOD STUFF</div>
+            <h2>Shortcuts worth knowing<span class="accent">.</span></h2>
+          </div>
+          <label class="platform-picker">
+            <span class="sr-only">Choose your operating system</span>
+            <select id="platform" aria-label="Choose your operating system">
+              <option value="windows">⌘ Windows / Linux</option>
+              <option value="mac">⌘ macOS</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Search shortcuts</span>
+            <input id="search" type="search" placeholder="Search a shortcut, action, or key..." autocomplete="off">
+            <kbd class="search-hint">/</kbd>
+          </label>
+          <div class="category-list" id="categories" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="results-meta">
+          <span id="results-count" aria-live="polite"></span>
+          <button class="favorites-toggle" id="favorites-toggle" type="button" aria-pressed="false">
+            <span aria-hidden="true">♡</span> Favorites <span class="favorite-count" id="favorite-count">0</span>
+          </button>
+        </div>
+
+        <div class="shortcut-grid" id="shortcut-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span>
+          <h3>No shortcuts found</h3>
+          <p>Try another search or choose a different category.</p>
+          <button class="reset-button" id="reset-filters" type="button">Clear filters</button>
+        </div>
+        <p class="footnote">Shortcuts can vary by keyboard layout and your VS Code keymap. <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank" rel="noreferrer">See the official shortcut reference <span aria-hidden="true">↗</span></a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>shortcut<span class="brand-light">studio</span></span></a>
+      <span>Built for your next great idea.</span>
+      <span class="footer-version">A little more flow, every day <span class="accent">✳</span></span>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
